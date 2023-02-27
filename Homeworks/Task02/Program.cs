@@ -6,9 +6,9 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Введите первое число: a = ");
+Console.Write("Введите первое число: a = ");
 int firstNumber = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число: b = ");
+Console.Write("Введите второе число: b = ");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
 if (firstNumber > secondNumber)
