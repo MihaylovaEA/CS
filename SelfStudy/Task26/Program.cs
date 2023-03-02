@@ -12,7 +12,14 @@ Console.WriteLine($"{number} в степени {degree} = {exp}");
 int Exponentiation (int num, int deg)
 {
     int res = 1;
-    for (int i = 1; i <= deg; i++)
-        res = res * num;
+    int count = 1;
+    while (count <= deg)
+    {
+        res = res *num;
+        count++;  
+    }
+    
+    /*for (int i = 1; i <= deg; i++)
+        res = res * num;*/
     return res;
 }
