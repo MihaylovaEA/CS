@@ -14,6 +14,6 @@ int Digits (int num)
     {
         num =num / 10;
         count++;
-    };
+    }
     return count;
-};
+}
