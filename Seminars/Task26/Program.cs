@@ -8,7 +8,7 @@ Console.WriteLine("Введите число:");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int digits = Digits(number);
-Console.WriteLine($"В числе {number} {digits} цифр");
+Console.WriteLine($"В числе {number} {digits} цифр(ы)");
 
 int Digits (int num)
 {
