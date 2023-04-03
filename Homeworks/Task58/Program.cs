@@ -31,27 +31,26 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
-}   
+}
 
 bool Check(int[,] matrixA, int[,] matrixB)
 {
     return matrixA.GetLength(1) == matrixB.GetLength(0);
-}   
+}
 
 int[,] Product(int[,] matrixA, int[,] matrixB)
 {
-     int[,] product = new int[matrixA.GetLength(0), matrixB.GetLength(1)]; 
-     int count = 1;
+    int[,] product = new int[matrixA.GetLength(0), matrixB.GetLength(1)];
 
     for (int i = 0; i < product.GetLength(0); i++)
     {
         for (int j = 0; j < product.GetLength(1); j++)
         {
-            for (int s = 0; s <= matrixA.GetLength(0); s++)
+            for (int s = 0; s < matrixA.GetLength(1); s++)
             {
-             product[i, j] += matrixA[i, s] * matrixB[s, j];   
+                product[i, j] += matrixA[i, s] * matrixB[s, j];
             }
-            
+
         }
     }
     return product;
@@ -80,8 +79,11 @@ Console.WriteLine("матрица B: ");
 PrintMatrix(matrB);
 Console.WriteLine();
 
-int[,] productMatrix = Product(matrA, matrB);
 bool check = Check(matrA, matrB);
-if (check == true) PrintMatrix(productMatrix);
+if (check == true)
+{
+    int[,] productMatrix = Product(matrA, matrB);
+    PrintMatrix(productMatrix);
+}
 else Console.WriteLine("Матрицы перемножить нельзя. Для перемножения матриц количество столбцов матрицы А должно равняться количеству строк марицы В.");
 
